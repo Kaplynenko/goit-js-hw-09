@@ -1,0 +1,1 @@
+{"version":3,"sources":["js/03-promises.js"],"names":["createPromise","position","delay","Math","random"],"mappings":";AACA,SAASA,EAAcC,EAAUC,GACTC,KAAKC","file":"03-promises.57dc775c.js","sourceRoot":"../src","sourcesContent":["\nfunction createPromise(position, delay) {\n  const shouldResolve = Math.random() > 0.3;\n  if (shouldResolve) {\n    \n  } else {\n  }\n}\n"]}
