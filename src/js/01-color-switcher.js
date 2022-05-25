@@ -6,6 +6,7 @@ buttonStop.addEventListener("click", onStopBtnClick)
 
 const DELAY = 1000;
 
+intervalId = null;
 
 function onStartBtnClick() {
     intervalId = setInterval(() => {
@@ -13,6 +14,7 @@ function onStartBtnClick() {
     },DELAY);
     changeBtnStatus(false, true);
 };
+
 function onStopBtnClick() {
     clearInterval(intervalId);
     changeBtnStatus(true, false);
