@@ -1,12 +1,12 @@
-const buttonStart = document.Qeryselector("button[data-start]")
-const buttonStop = document.Qeryselector("button[data-stop]")
+const buttonStart = document.querySelector("button[data-start]")
+const buttonStop = document.querySelector("button[data-stop]")
 
 buttonStart.addEventListener("click", onStartBtnClick)
 buttonStop.addEventListener("click", onStopBtnClick)
 
 const DELAY = 1000;
 
-intervalId = null;
+let intervalId = null;
 
 function onStartBtnClick() {
     intervalId = setInterval(() => {
@@ -19,3 +19,10 @@ function onStopBtnClick() {
     clearInterval(intervalId);
     changeBtnStatus(true, false);
 }
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+}
+const changeBtnStatus = (remove, add) => {
+    buttonStart.disabled = add;
+    buttonStop.disabled = remove;
+};
